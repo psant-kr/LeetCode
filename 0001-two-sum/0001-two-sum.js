@@ -33,6 +33,7 @@ var twoSum = function(nums, target) {
     for(let i = 0; i < nums.length; i++){
         nums[i] = [nums[i], i];
     };
+    // console.log(nums);
     function fn(x,y){
         return x[0] - y[0]; 
     };
