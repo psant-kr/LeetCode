@@ -22,12 +22,23 @@ var majorityElement = function(nums) {
     let maj;
     let count = 0;
     for(let i = 0; i < nums.length; i++){
+        // one way
+        // if(count == 0){
+        //     maj = nums[i];
+        //     count++;
+        // }else if(count != 0 && maj == nums[i]){
+        //     count++;
+        // }else if(count != 0 && maj != nums[i]){
+        //     count--;
+        // }
+
+        // other way
         if(count == 0){
             maj = nums[i];
+        }
+        if( maj == nums[i]){
             count++;
-        }else if(count != 0 && maj == nums[i]){
-            count++;
-        }else if(count != 0 && maj != nums[i]){
+        }else{
             count--;
         }
     }
