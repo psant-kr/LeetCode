@@ -37,9 +37,9 @@ var threeSum = function(nums) {
                 result.push([nums[i], nums[j], nums[k]]);
                 // stop duplicates of j and k
                 while(nums[j] == nums[j+1]) j++;
-                while(nums[k] == nums[k-1]) k++;
+                while(nums[k] == nums[k-1]) k--;
                 j++;
-                k++
+                k--;
             }else if(sum < 0){
                 j++;
             }else {
